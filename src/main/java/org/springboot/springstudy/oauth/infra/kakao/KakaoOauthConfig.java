@@ -1,4 +1,12 @@
 package org.springboot.springstudy.oauth.infra.kakao;
 
-public record KakaoOauthConfig() {
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties(prefix = "oauth.kakao")
+public record KakaoOauthConfig(
+        String redirectUri,
+        String clientId,
+        String clientSecret,
+        String[] scope
+) {
 }
