@@ -19,7 +19,7 @@ public class KakaoAuthCodeRequestUrlProvider implements AuthCodeRequestUrlProvid
     }
 
     @Override
-    public String provide(){
+    public String provide() {
         return UriComponentsBuilder
                 .fromUriString("https://kauth.kakao.com/oauth/authorize")
                 .queryParam("response_type", "code")
@@ -28,4 +28,5 @@ public class KakaoAuthCodeRequestUrlProvider implements AuthCodeRequestUrlProvid
                 .queryParam("scope", String.join(",", kakaoOauthConfig.scope()))
                 .toUriString();
     }
+
 }

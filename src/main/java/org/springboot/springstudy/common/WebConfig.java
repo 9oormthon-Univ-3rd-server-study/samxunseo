@@ -1,6 +1,6 @@
 package org.springboot.springstudy.common;
 
-import org.springboot.springstudy.oauth.presentation.OauthServerConverter;
+import org.springboot.springstudy.oauth.presentation.OauthServerTypeConverter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.HttpMethod;
@@ -27,7 +27,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addFormatters(FormatterRegistry registry){
-        registry.addConverter(new OauthServerConverter());
+        registry.addConverter(new OauthServerTypeConverter());
     }
 
 }

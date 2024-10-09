@@ -55,6 +55,8 @@ dependencies {
 
 	// Configuration Properties
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+	implementation 'io.netty:netty-resolver-dns-native-macos:4.1.73.Final:osx-x86_64'
 }
 
 tasks.named('test') {

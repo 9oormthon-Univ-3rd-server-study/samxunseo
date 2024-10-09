@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import org.springboot.springstudy.oauth.domain.OauthId;
 import org.springboot.springstudy.oauth.domain.OauthMember;
-import org.springframework.context.annotation.Profile;
 
 import java.time.LocalDateTime;
 
@@ -17,13 +16,15 @@ public record KakaoMemberResponse(
         LocalDateTime connectedAt,
         KakaoAccount kakaoAccount
 ) {
-    public OauthMember toDomain(){
+
+    public OauthMember toDomain() {
         return OauthMember.builder()
                 .oauthId(new OauthId(String.valueOf(id), KAKAO))
                 .nickname(kakaoAccount.profile.nickname)
                 .profileImageUrl(kakaoAccount.profile.profileImageUrl)
                 .build();
     }
+
     @JsonNaming(SnakeCaseStrategy.class)
     public record KakaoAccount(
             boolean profileNeedsAgreement,
