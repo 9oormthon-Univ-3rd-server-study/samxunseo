@@ -3,7 +3,7 @@ package org.springboot.springstudy.oauth.domain;
 import java.util.Locale;
 
 public enum OauthServerType {
-    kakao,
+    KAKAO,
     ;
 
     public static OauthServerType fromName(String type){
