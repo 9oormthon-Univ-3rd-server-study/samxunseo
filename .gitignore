@@ -1,6 +1,7 @@
 HELP.md
 .gradle
 build/
+.env
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -43,3 +44,6 @@ application.yml
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+
+### Key ###
+.pem
