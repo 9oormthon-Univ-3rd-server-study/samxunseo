@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: SpringStudy
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        highlight_sql: true
+    hibernate:
+      ddl-auto: create
+
+oauth:
+  kakao:
+    client_id: ${KAKAO_CLIENT_ID}
+    redirect_uri: ${KAKAO_REDIRECT_URI}
+    client_secret: ${KAKAO_CLIENT_SECRET}
+    scope:
+      - profile_nickname
+      - profile_image
+
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: TRACE
+
+server:
+  ssl:
+    enabled: false
