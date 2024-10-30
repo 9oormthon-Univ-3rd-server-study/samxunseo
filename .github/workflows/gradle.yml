@@ -34,7 +34,7 @@ jobs:
       # Gradle build 실행(테스트 제외)
       - name: Build with Gradle
         run: |
-          chomd +x ./gradlew
+          chmod +x ./gradlew
           ./gradlew clean build -x test
 
       # Docker Hub 로그인
