@@ -70,7 +70,7 @@ jobs:
             newgrp docker
             
              # 새 이미지 pull
-            docker pull ${{ secrets.DOCKER_USERNAME }}/server:latest
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/server:latest
             
             # 기존 컨테이너 확인 및 제거
             if [ "$(docker ps -aq -f name=server)" ]
@@ -83,4 +83,4 @@ jobs:
             fi
             
             # 새 컨테이너 실행 (80:8080 포트 매핑)
-            docker run -d --name server -p 80:8080 ${{ secrets.DOCKER_USERNAME }}/server
+            docker run -d --name server -p 80:8080 ${{ secrets.DOCKERHUB_USERNAME }}/server
