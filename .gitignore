@@ -46,4 +46,4 @@ application.properties
 **/._.DS_Store
 
 ### Key ###
-.pem
+*.pem
